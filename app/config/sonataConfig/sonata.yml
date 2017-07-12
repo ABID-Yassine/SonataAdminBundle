@@ -1,0 +1,23 @@
+sonata_block:
+
+    default_contexts: [cms]
+
+
+    blocks:
+        # enable the SonataAdminBundle block
+
+        sonata.admin.block.admin_list:
+            contexts: [admin]
+        # ...
+sonata_admin:
+    dashboard:
+        groups:
+            news:
+                 label:                ~
+                                label_catalogue:      ~
+                                items:
+                                  # just comment or remove the sonata.news.admin.post declaration to hide it from the menu.
+                                  #  - sonata.news.admin.post
+                                    - route:        blog_home
+                                      label:        Blog
+                                    - sonata.news.admin.news
